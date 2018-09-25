@@ -1,6 +1,6 @@
 
 
-def superReducedString(s):
+def recursiveDeleteDuplicate(s):
     """This function takes in any string and removes successive letters such
     as "aa" "bb". What makes this code interesting is the recursive nature.
     """
@@ -11,5 +11,5 @@ def superReducedString(s):
     for n in range(len(s)-1):
         if s[n] == s[n+1]:
             s = s[:n] + s[n+2:]
-            return superReducedString(s)
+            return recursiveDeleteDuplicate(s)
     return s
